@@ -31,7 +31,7 @@ import CoreLocation
  
  */
 
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     //기본적인 정보들
     var id: Int
     var name: String
