@@ -47,12 +47,6 @@ struct Landmark: Hashable, Codable, Identifiable {
         Image(imageName)
     }
     
-    //지도 좌표계에 대한 구조체를 선언
-    struct Coordinates: Hashable, Codable {
-        var latitude: Double
-        var longitude: Double
-    }
-    
     //landmarkData.json에 포한된 데이터: 지도 좌표계 값
     private var coordinates: Coordinates
     
@@ -61,4 +55,9 @@ struct Landmark: Hashable, Codable, Identifiable {
         CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
     
+    //지도 좌표계에 대한 구조체를 선언
+    struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+    }
 }
